@@ -1,8 +1,6 @@
 name: Docker image Build Process
 
-on:
-  workflow_dispatch:
-  workflow_call:
+on: [push]
 
 jobs:
   build:
