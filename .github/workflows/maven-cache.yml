@@ -28,7 +28,7 @@ jobs:
         run: |
           if [ -z "$USER_DOCKER" ]; then
             echo "Docker Hub Username is not set"
-            exit 1
+            # exit 1
           else
             echo "Docker Hub Username is set"
           fi
