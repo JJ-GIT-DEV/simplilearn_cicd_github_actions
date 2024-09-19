@@ -21,7 +21,7 @@ __Steps:__
     * **Publishing:** The built Docker image is uploaded to the Docker Hub registry, making it available for use in various environments.
 
 * **GitHub Action:**
-    * **Secrets:** 
+    * **Secrets:** It is important that the variables can be used in the action, the parameter "secretes: inherit" must be set!
         ![alt text](images/image_secrets_settings.png)
 
 Example GitHub Action YAML File - caller.yml
@@ -29,12 +29,13 @@ Example GitHub Action YAML File - caller.yml
 ```yaml
 name: Reusable Workflow Caller
 
-on:
-  push:
+on: [push]
 
 jobs:
   Reusable-caller-job:
     uses: ./.github/workflows/maven-cache.yml
+    secrets: inherit
+
 ```
 
 Example GitHub Action YAML File - caller.yml
