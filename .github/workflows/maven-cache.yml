@@ -50,4 +50,7 @@ jobs:
         context: .
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.appName }}:latest
+<<<<<<< HEAD
         
+=======
+>>>>>>> 6b2c5c98922d29c0d7a46e1a041001a3f671bb67
